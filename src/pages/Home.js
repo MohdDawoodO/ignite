@@ -4,7 +4,6 @@ import { useAtom } from "jotai";
 import { newGamesURL, popularGamesURL, upcomingGamesURL } from "../api";
 import fetchData from "../components/fetchData";
 import style from "../styles/Home.module.scss";
-import { LayoutGroup } from "framer-motion";
 import { motion } from "framer-motion";
 
 import Game from "../components/Game";
@@ -52,7 +51,7 @@ const Home = () => {
       className={`${style.home} ${dark ? style.dark : ""}`}
     >
       <div className={style.gameList}>
-        <LayoutGroup>
+
           {searchedGames.length ? (
             <>
               <h2>Searched Games</h2>
@@ -110,7 +109,6 @@ const Home = () => {
               <Game game={game} key={game.id} />
             ))}
           </div>
-        </LayoutGroup>
       </div>
     </motion.div>
   );

@@ -110,12 +110,11 @@ const GameDetails = () => {
       className={`${style.detailContainer} shadow`}
     >
       <motion.div
-        layoutId={path}
         className={`${style.gameDetails} ${dark ? style.dark : ""}`}
       >
         <div className={style.title}>
           <div className={style.info}>
-            <motion.h3 layoutId={`title ${path}`}>{game.name}</motion.h3>
+            <motion.h3 >{game.name}</motion.h3>
             <div className={style.rating}>
               <p>Rating: ({game.rating})</p>
               {getRating()}
@@ -141,7 +140,6 @@ const GameDetails = () => {
           className={style.bg_image}
           src={smallImg(game.background_image, 1280)}
           alt={game.name}
-          layoutId={`image ${path}`}
         />
         <div className={style.desc}>
           <p>{game.description_raw}</p>

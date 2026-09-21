@@ -35,15 +35,13 @@ const Game = ({ game }) => {
       animate="show"
       exit="exit"
       initial="hidden"
-      layoutId={game.id}
       className={`${style.game} ${dark ? style.dark : ""}`}
       onClick={loadGameHandler}
     >
       <Link to={`/game/${game.id}`}>
-        <motion.h3 layoutId={`title ${game.id}`}>{game.name}</motion.h3>
+        <motion.h3 >{game.name}</motion.h3>
         <p>{game.released}</p>
         <motion.img
-          layoutId={`image ${game.id}`}
           src={
             game.background_image ? smallImg(game.background_image, 640) : ""
           }
